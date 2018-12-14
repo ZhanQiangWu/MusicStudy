@@ -1,8 +1,12 @@
 {
   "pages": [
     "page/component/home/index",
+    "page/component/playlist/index",
+    "page/component/login/index",
     "page/component/me/index",
-    "page/component/login/index"
+    "page/component/playing/index",
+    "page/component/recommend/index",
+    "page/component/user/index"
   ],
   "window": {
     "navigationBarTextStyle": "#fff",

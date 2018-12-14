@@ -51,7 +51,8 @@ Page({
                     })
                     return;
                 }
-                app.mine();
+                wx.setStorageSync('user',res.data)
+                //app.mine();
                 app.likelist();
                 if (that.data.linktype == 1) {
                     wx.navigateBack({
@@ -59,9 +60,9 @@ Page({
                     })
                 }
                 else if (that.data.linktype == 2) {
-                    wx.redirectTo({
-                        url: that.data.url
-                    })
+                     wx.redirectTo({
+                         url: that.data.url
+                     })
                 } else {
                     wx.switchTab({
                         url: '../home/index'

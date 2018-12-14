@@ -136,6 +136,7 @@ function playAlrc(that, app) {
 };
 //加载评论1为单曲，2歌单类，3专辑,
 function loadrec(cookie, offset, limit, id, cb, type) {
+  type = 1;
   wx.request({
     url: bsurl + 'comment/music',
     data: {

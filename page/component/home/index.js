@@ -30,7 +30,7 @@ Page({
             offset: 0,
             limit: 20
         },
-        djcate: {loading: false},
+        djcate: { loading: false },
         djrecs: {},
         sort: {
             idx: 3, loading: false
@@ -65,8 +65,7 @@ Page({
                 }
             })
             return;
-        }
-        ;
+        };
     },
     onHide: function () {
         nt.removeNotification("music_next", this)
@@ -91,7 +90,7 @@ Page({
     switchtab: function (e) {
         var that = this;
         var t = e.currentTarget.dataset.t;
-        this.setData({tabidx: t});
+        this.setData({ tabidx: t });
         if (t == 1 && !this.data.playlist.loading) {
             this.gplaylist()
         }
@@ -195,7 +194,8 @@ Page({
     onReachBottom: function () {
         if (this.data.tabidx == 1) {
             this.gplaylist(1);//更多歌单
-        } else if (this.data.tabidx == 2) {
+        }
+        else if (this.data.tabidx == 2) {
             this.gdjlist(1);//更多dj节目
         }
     },
@@ -227,7 +227,7 @@ Page({
         //banner，
         wx.request({
             url: bsurl + 'banner',
-            data: {cookie: app.globalData.cookie},
+            data: { cookie: app.globalData.cookie },
             success: function (res) {
                 that.setData({
                     banner: res.data.banners
@@ -250,7 +250,7 @@ Page({
         async.map(['personalized', 'personalized/newsong', 'personalized/mv', 'personalized/djprogram'], function (item, callback) {
             wx.request({
                 url: bsurl + item,
-                data: {cookie: app.globalData.cookie},
+                data: { cookie: app.globalData.cookie },
                 success: function (res) {
                     callback(null, res.data.result)
                 }

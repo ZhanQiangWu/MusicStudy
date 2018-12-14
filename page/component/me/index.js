@@ -9,9 +9,10 @@ Page({
     onLoad: function () {
         var that=this;
         var id= wx.getStorageSync('user');
-        if(!id){
+        console.log(id)
+        if(!id.account){
             wx.redirectTo({
-                url: '../login/index'
+              url: '../login/index'
             });
             return;
         }
@@ -21,7 +22,7 @@ Page({
             url: bsurl + 'user/subcount?id=' + id,
             success: function (res) {
                 that.setData({
-
+                    
                     subcount: res.data
                 });
             }
@@ -44,5 +45,5 @@ Page({
     },
     onShow: function () {
         console.log("me show----------")
-    }
+     }
 })
