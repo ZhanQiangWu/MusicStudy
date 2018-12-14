@@ -6,7 +6,9 @@
     "page/component/me/index",
     "page/component/playing/index",
     "page/component/recommend/index",
-    "page/component/user/index"
+    "page/component/user/index",
+    "page/component/search/index",
+    "page/component/artist/index"
   ],
   "window": {
     "navigationBarTextStyle": "#fff",
