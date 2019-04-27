@@ -39,7 +39,7 @@ Page({
     wx.request({
       url: bsurl + 'song/detail',
       data: {
-        id: id
+        ids: id
       },
       success: function (res) {
         app.globalData.curplay = res.data.songs[0];
